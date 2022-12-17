@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html>
-	<head>
-	<script>
-		var gui = require('nw.gui');
-		var document = document;
-		var portfinder = require('portfinder');
-		var app = require('./index.js');
-		app.pid = process.pid;
-		app.argv = gui.App.argv.slice(0);
-		var max = 65535;
-		var min = 49152;
-		portfinder.basePort = (Math.floor(Math.random() * (max - min + 1)) + min);
-		portfinder.getPort(function (err, port) {
-			var port = port;
-			app.port = port;
-			app.use(require('./aria2'), { location: 'aria2c' });
-			app.use(require('./server'), { port: port });
-
-			app.init(function (){ document.title = process.title; });
- 			document.location = 'http://localhost:'+port;
-		});
-	</script>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
 	
-	</head>
+<script>
+console.log("sa");
+</script>
+
+
+</body>
 </html>
